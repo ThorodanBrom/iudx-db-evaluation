@@ -122,7 +122,7 @@ public class APIServer extends AbstractVerticle {
     JsonObject requested_data;
     DeliveryOptions options = new DeliveryOptions();
     requested_data = routingContext.getBodyAsJson();
-    options.addHeader("options", requested_data.getString("options"));
+    options.addHeader("options", "options");
     publishEvent("timescale", requested_data, options, response);
   }
 
